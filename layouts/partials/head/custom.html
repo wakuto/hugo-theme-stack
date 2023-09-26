@@ -3,16 +3,24 @@
     :root {
         --article-font-family: "Kosugi Maru", var(--base-font-family);
     }
+    .article-content code, .article-content pre {
+        font-family: "M PLUS 1 Code", var(--code-font-family)
+    }
 </style>
 
 <script>
     (function () {
-        const customFont = document.createElement('link');
-        customFont.href = "https://fonts.googleapis.com/css2?family=Kosugi+Maru:wght@400;700&display=swap";
+        const mainFont = document.createElement('link');
+        mainFont.href = "https://fonts.googleapis.com/css2?family=Kosugi+Maru:wght@400;700&display=swap";
+        mainFont.type = "text/css";
+        mainFont.rel = "stylesheet";
 
-        customFont.type = "text/css";
-        customFont.rel = "stylesheet";
+        const codeFont = document.createElement('link');
+        codeFont.href = "https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@400;700&display=swap";
+        codeFont.type = "text/css";
+        codeFont.rel = "stylesheet";
 
-        document.head.appendChild(customFont);
+        document.head.appendChild(mainFont);
+        document.head.appendChild(codeFont);
     }());
 </script>
